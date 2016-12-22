@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">Post a messge</div>
+    <div class="panel-body">
+      <div class="input-group">
+        <textarea class="form-control custom-form-control" style="resize: none;" ng-model="main.message"></textarea>
+        <span class="input-group-addon btn btn-primary" ng-click="main.postMessage()">POST</span>
+      </div>      
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Messages </div>
+    <div class="panel-body">
+      <div class="list-group">
+        <ul>
+          <li class="list-group-item" ng-repeat="message in main.messages">{{ message.msg }} by {{ message.user.email }}</li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+</div>
